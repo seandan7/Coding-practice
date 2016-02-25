@@ -19,11 +19,17 @@ Sean Daniels
 
 //console.log(username);
 
-var userFName = prompt("What is your first name?");
-var userLName = prompt ("What is your last name?");
+//var userFName = prompt("What is your first name?");
+//var userLName = prompt ("What is your last name?");
 
-console.log(userFName);
-alert(userLName);
+//console.log(userFName);
+//alert("User last name is: " + userLName + ". First name is: " +userFName);
 
-var userChoice = confirm("Are you doing this right?");
-alert(userChoice);
+//var userChoice = confirm("Are you doing this right?");
+//alert(userChoice);
+var num1 = prompt("What is your first number?");
+var num2 = prompt("What is your last number?");
+
+var sum = Number(num1) + Number(num2);
+alert("The sum of your numbers is : " + sum);
+
