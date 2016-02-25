@@ -2,23 +2,28 @@
 Sean Daniels
 2/24/2016 */
 
+
 "use strict";
 
-//day 1 solution
-var number1= 12;
+//tell the user something
+//alert("Hello, I'm an alert. I'll just wait here until you close me.");
 
-//0x1e is 30 in hexa 
-var number2 = 0x1e;
+//console.log("alert is done");
 
-var string = "Answer equals: ";
+//userChoice stores the boolean of whether user confirms or not
+//var userChoice = confirm("Are you sure you want to do that?");
+//console.log(userChoice);
 
-var sum = number1 + number2;
+//ask the user for input
+//var username = prompt("What is your name?");
 
-console.log(string + sum);
+//console.log(username);
 
-//The HTML DOM is a Socument Object Model. 
+var userFName = prompt("What is your first name?");
+var userLName = prompt ("What is your last name?");
 
-/* git status
-	git add.
-	git commit -m"your message here"
-	git push origin master */
+console.log(userFName);
+alert(userLName);
+
+var userChoice = confirm("Are you doing this right?");
+alert(userChoice);
