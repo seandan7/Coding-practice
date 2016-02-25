@@ -18,3 +18,7 @@ console.log(string + sum);
 
 //The HTML DOM is a Socument Object Model. 
 
+/* git status
+	git add.
+	git commit -m"your message here"
+	git push origin master */
