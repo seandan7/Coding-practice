@@ -14,25 +14,26 @@ var f = parseInt(e); //NaN
 console.log( isNaN(f) ); //true
 */
 
-
-/*
-Inputed Strings to Ints
+/*User inputted sums
 var num1 = prompt("Gimmie a number");
-var num2 = prompt("Gimmie another");
+var num2 = prompt("Gimmie anotha!");
 
-var sum = (Number(num1)+Number(num2));
-
+var sum = parseInt(num1) + parseInt(num2);
 alert(sum);
 */
 
-//Confirm if user is >18
-var userAge = prompt("What's your age?");
-var ageInt = Number(userAge);
+/*
+Create variables, increment a, decrement b, compare a and b in test 1, compre a greater than b test
+2, log out using test 1 AND test 2 correct,,,, test 2 OR test 1 correct?
+var a = 12;
+var b = 10;
 
-if (ageInt<18){
-	alert("Nope");
-}
+a++ ;
+b-- ;
 
-else{
-	alert("yup");
-}
+var test1 = a == b;
+
+var test2 = a>b;
+console.log(test1 && test2);
+console.log(test2 || test1);
+*/
