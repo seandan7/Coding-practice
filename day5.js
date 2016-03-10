@@ -19,57 +19,67 @@ promptLots();
 */
 
 //day 5 homework
-/*
+/*1. Square. WORKS
 function squareNumber(num){
-	if(num==NaN){
+	if(isNaN(num)){
 		return NaN;
 	}
 	return num*num;
 	
 }
 
-var x = squareNumber(6);
+var x = squareNumber(5);
 console.log(x);
-*/
-// 2.capitalize first letter and add a period
-/*function capitalPeriod(str){
+ 
+
+ 2.capitalize first letter and add a period WORKS
+
+function capitalPeriod(str){
 	if(!str || typeof str !== "string") {
-		return str;
+		return "";
+	}
+	else if (str.endsWith(".")){
+		return "";
 	}
 	//add dont run if already has period
 	var capital = str[0].toUpperCase() + str.slice(1);
 	var addPeriod = capital + ".";
 	return addPeriod;
 }
-var x = capitalPeriod("sean");
+var x = capitalPeriod("12");
 console.log(x);
+
+/*3.Flip 1st half of string with second half WORKS
 */
-
-
-/*3.Flip 1st half of string with second half
 function flipString(str){
-		if(!str || typeof str !== "string") {
-		return "no";
+	
+		if(typeof str !== "string") {
+		return " ";
 	}
-		if(str.length<2 || str.length%2==true){
-			return "no";
+		if(str.length<2 || str.length%2 !== 0){
+			return " ";
 		} 
-		var half = str.substring(0, substring/2);
-		var secondHalf = str.slice(substring/2);
-		var newString = half + secondHalf;
+		var half = str.substring(0, str.length/2);
+		var secondHalf = str.substring(str.length/2);
+		var newString = secondHalf + half;
 		return newString;
 		}
 var x = flipString("Hello my name is sean");
 console.log(x);
-*/
+
 
 /*average out an array of 4 numbers
-function arrayAverage(num1,num2,num3,num4){
-	var average = num1 + num2 + num3 + num4
+
+
+function arrayAverage(numArray){
+	
+	var	numAverage = numArray/numArray.length;
+	return numAverage;
 	
 }
-*/
-
+var numArrays = [1,5,29,10];
+var x =arrayAverage(numArrays);
+console.log(x);
 
 //NOTES
 
