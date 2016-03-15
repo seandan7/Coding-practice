@@ -1,4 +1,26 @@
-//Day 6 Javascript notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Day 6 Javascript notes
 
 //capitalize and add period
 
@@ -84,12 +106,13 @@ function average(numArray){
 var j = 0;
 function check(){
 	j++;
-	console.log(i);
+	console.log(j);
 	
-	return false;
+	return j % 2 ===0;
 }
 function run(str){
-	if(!str | !check()){
+	var checkResult = check();
+	if(true || checkResult){
 		alert("entered if");
 	}
 }
