@@ -6,26 +6,30 @@ var dinosaur = function(type,era,food){
 	
 }
 var x = dinosaur["t-rex", "2000", "plants"];
-console.log(x);
+
 var dinosaurs = [];
 var emptyDino = function(){
-	emptyDino = [];
 	var dinoNumber = prompt("How many dinos you want?");
 	for(x=1; x<=dinoNumber; x++){
 		var dinoType = prompt("What type of dinosaur?");
 		var dinoEra = prompt("What era is the dinosaur?");
-		var dinoEats = prompt("What did your dino eat?");
-	emptyDino.push(dinoType);
-	emptyDino.push(dinoEra);
-	emptyDino.push(dinoEats);
-		dinosaurs.push(emptyDino);
-
+		var dinoFood = prompt("What did your dino eat?");
+		var newDino = dinosaur(dinoType, dinoEra, dinoFood);
+		dinosaurs.push(newDino);
 	}
-}
+	//print the data
+	for(i=0; i<dinoNumber; i++){
+		var d = dinosaurs[i];
+		var dType = d[0];
+		var dEra = d[1];
+		var dFood = d[2];
+		console.log("You have a " + dType +" dinosaur");
+		console.log("It is from the year " + dEra);
+		console.log("It likes to eat " + dFood);
+	}
+	}
+
+
 
 emptyDino();
 
-console.log(emptyDino);
-console.log(dinosaur);
-	
-	
