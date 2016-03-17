@@ -12,9 +12,15 @@
 
 //This gives you random # from 0-3 but floats
 
-//Math.ceil rounds up to round number
+
+
+//global variables setting games won n played to 0
+var gameResultCount = 0;
+var gameWinCount = 0;
+
 
 function outputGameResult(){
+//Math.ceil rounds up to round number
 var choice = Math.ceil(Math.random()*3);
 
 if(choice === 1){
@@ -27,20 +33,23 @@ if(choice === 3){
 	var compChoice = "the computer chose scissors";
 }
 
-
-
-input1Id = domInput1();
+if(input1Id !== "paper" || input1Id !== "scissors"){
+	var gameResult = "Invalid Input";
+	var userChoice = "NOOOO";
+}
+//takes input into a variable and makes it lowercase
+input1Id = domInput1().toLowerCase();
 
 if(input1Id == "paper" && choice ===1){
-		var gameResult = "You won";
+		var gameResult = "You win";
 		var userChoice = "you chose paper";
 }
 else if(input1Id == "paper" && choice==2){
-	var gameResult = "you tied";
+	var gameResult = "You tie";
 	var userChoice = "you chose paper";
 }
 else if(input1Id == "paper" && choice==3){
-	var gameResult = "you lost";
+	var gameResult = "You lost";
 	var userChoice = "you chose paper";
 }
 
@@ -50,11 +59,11 @@ if(input1Id == "rock" && choice ===1){
 		var userChoice = "you chose rock";
 }
 else if(input1Id == "rock" && choice==2){
-	var gameResult = "you lost";
+	var gameResult = "You lost";
 	var userChoice = "you chose rock";
 }
 else if(input1Id == "rock" && choice==3){
-	var gameResult = "you win";
+	var gameResult = "You win";
 	var userChoice = "you chose rock";
 }
 
@@ -64,20 +73,30 @@ if(input1Id == "scissors" && choice ===1){
 		var userChoice = "you chose scissors";
 }
 else if(input1Id == "scissors" && choice==2){
-	var gameResult = "you win";
+	var gameResult = "You win";
 	var userChoice = "you chose scissors";
 }
 else if(input1Id == "scissors" && choice==3){
-	var gameResult = "you tie";
+	var gameResult = "You tie";
 	var userChoice = "you chose scissors";
 }
-domTextOutput(compChoice+"</br>" + userChoice +  "</br>" +gameResult);
+domTextOutput(compChoice+ "</br>" + userChoice +  "</br>" +gameResult + "</br> You have played this many games: " + gameResultCount+
+"</br> You have won this many: " + gameWinCount);
+
+
+if(gameResult == "You tie" || gameResult == "You win" || gameResult == "You lost"){
+	gameResultCount++;
+}
+if(gameResult == "You win"){
+	gameWinCount++;
+}
 
 
 }
+
 function handleGoButtonClick(event) {
 	var x = outputGameResult();
-	console.log(x);
+
 	// do events here
 	//Example - set value of input 1 to "Hello JavaScript!"
 	domInput1("");
