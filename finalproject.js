@@ -1,15 +1,69 @@
 //JS Final Project
 
-var  inputStuff = document.querySelector("input");
-var myList = document.querySelector("ul");
+var toDoItems = [
+	{name : "Check email", isDone: "no"}
+		];
 
-var listItems = document.createElement("li");
+var items = 0;
 
-//get item info from text input( add </br> after )
-listItems.textContent = "sup";
+		
+function printList(){
+	items++;
+	var list = document.getElementById("ul");
+	
+	for (var i=0; i<toDoItems.length; i++){
+		var item = toDoItems[i];
+		var toDo = document.createElement("li");
+		toDo.textContent = item.name;
+		toDo.setAttribute("id", item);
+		toDo.setAttribute("rel", item.name);
+	
+		toDo.addEventListener("click", function(evt){
+			 //item.setAttribute("style", "text-decoration: line-through");	   
+				list.removeChild(evt.target);
+				toDoItems.splice(item,1)
+		});
+		list.appendChild(toDo);
 
-document.body.appendChild(listItems);
-myList.appendChild(listItems);
+	}	
+}
+
+/*
+function isFinished(){
+	var list = document.getElementById("ul");
+	
+	if()
+	
+	
+}
 
 
-//Look up day 10 movie notes
+
+
+*/
+
+
+
+	function deleteList(){
+		var list = document.getElementById("ul");
+		list.innerHTML= ("");
+	
+		
+	}
+
+
+    document.getElementById("inputItem").value;       
+	var form = document.getElementById("myForm");
+	
+	   form.addEventListener("submit", function (evt) {
+            var listItem = document.getElementById("inputItem").value;
+			var newItem = {name:listItem, isDone: "no"};
+			toDoItems.push(newItem);
+			deleteList();
+			printList();
+			evt.preventDefault();
+			console.log(listItem);
+        });
+	
+	
+	
