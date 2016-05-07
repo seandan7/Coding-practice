@@ -92,7 +92,7 @@ var myCup3 = {color: "black", type: "mug", status: "full", content:"coffee"};
 //javascript.info
 
 /* Creates Item by click. deleted by click.
-
+*/
 var button = document.getElementById("addItem");
 
 var i = 0;
@@ -103,12 +103,11 @@ button.addEventListener("click", function(){
 	li.innerHTML = i;
 	var ul = document.getElementById("myList");
 	ul.appendChild(li);
-	
+	console.log(i + "th click")
 li.addEventListener("click",function(){
 	ul.removeChild(li);
+	
 });
 	
 }
 );
-
-*/

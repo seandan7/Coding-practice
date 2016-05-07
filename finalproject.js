@@ -15,13 +15,14 @@ function printList(){
 		var item = toDoItems[i];
 		var toDo = document.createElement("li");
 		toDo.textContent = item.name;
-		toDo.setAttribute("id", item);
+		toDo.setAttribute("id", "item-"+ i);
 		toDo.setAttribute("rel", item.name);
 	
 		toDo.addEventListener("click", function(evt){
 			 //item.setAttribute("style", "text-decoration: line-through");	   
 				list.removeChild(evt.target);
 				toDoItems.splice(item,1)
+
 		});
 		list.appendChild(toDo);
 
@@ -47,8 +48,7 @@ function isFinished(){
 	function deleteList(){
 		var list = document.getElementById("ul");
 		list.innerHTML= ("");
-	
-		
+
 	}
 
 
