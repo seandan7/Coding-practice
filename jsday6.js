@@ -1,13 +1,5 @@
 
-/* JavaScript Test Code Template
-   Corey Shuman
-   11/4/15
-   
-   This files contains some shortcut functions
-   to manipulate the values for two input textboxes.
-   It also sets up an event handler to handle
-   button clicks on the page.
-*/
+
 //Rock Paper Scissors
 
 //This gives you random # from 0-3 but floats
