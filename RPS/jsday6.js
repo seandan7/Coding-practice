@@ -1,6 +1,6 @@
 
 /* JavaScript Test Code Template
-   Corey Shuman
+   Sean Daniels
    11/4/15
    
    This files contains some shortcut functions
