@@ -1,4 +1,4 @@
-/* Geekwise JSI Jay 2 Notes
+/* 
 Sean Daniels
 2/24/2016 */
 
