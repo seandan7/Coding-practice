@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+	#topContainer {
+		background-image: url("abstract.jpeg");
+		height: 600px;
+		width:100%;
+		background-size: cover;
+	}
+	.input-group {
+		height: 34px;
+	}
+	#topRow {
+		margin-top: 200px;
+		text-align: center;
+		color: white;
+	}
+	#topRow h1 {
+		font-size: 300%;
+	}
+	.bold {
+	font-weight: bold;
+	}
+	.marginTop {
+		margin-top: 30px;
+	}
+	.center {
+		text-align: center;
+	}
+	.title {
+		margin-top: 100px;
+		font-size: 200%;
+	}
+	#footer {
+		background-color: lightblue;
+		padding-top:70px;
+		width:100%;
+	}
+	.marginBottom {
+		margin-bottom: 40px;
+	}
+	.appstoreImage {
+	width: 250px;
+	}
+	</style>
+	
+  </head>
+  <body>
+	
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="navbar-brand">My Site</a>
+			</div>
+			
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#download">Download Our App</a></li>
+				</ul>
+				
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="email" placeholder="Email" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<input type="password" placeholder="Password" class="form-control"/>
+					</div>
+					<button type="submit" class="btn btn-success">Log in</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container contentContainer" id="topContainer">
+		<div class="row marginBottom">
+				<div class="col-md-6 col-md-offset-3" id="topRow">
+					
+					<h1 class="marginTop">Why Our App?</h1>
+					
+					<p class="lead">Our app uses cool orange background pictures that are good for your eyes.</p>
+					<p>We also use AI to automate everything you do. Siri has nothing on us. </p>
+					<p class="bold marginTop">Join our mailing list!</p>
+					
+					<form class="marginTop">
+					
+					<div class="input-group">
+					
+					<span class="input-group-addon">@</span>
+					`	
+					<input type="email" class="form-control" placeholder ="Your email"/>
+					</div>
+					<input type="submit" class="btn btn-success btn-lg marginTop" />
+					
+					
+					</form>
+				
+				</div>
+				<div class="col-md-6">
+				</div>
+		</div>
+	</div>
+	<div class="container contentContainer">
+	
+		<div class="row center" >
+		
+			<h1 class="center title">Why This App is Awesome"</h1>
+			<p class="lead center">This app can do cool things, just give it a download</p>
+			
+		</div>
+		<div class="row" >
+			<div class="col-md-4 marginTop">
+			<h2><span class="glyphicon glyphicon-glass"></span>Cool Stuff</h2>
+			<p>Cool stuff that is really fun!<p>
+			<button class="btn btn-success marginTop">Sign up!</button>
+			</div>
+			
+			<div class="col-md-4 marginTop">
+			<h2><span class="glyphicon glyphicon-heart"></span>Nice Stuff</h2>
+			<p>Cool stuff that is really nice!<p>
+			<button class="btn btn-success marginTop">Sign up!</button>
+			</div>
+		
+			<div class="col-md-4 marginTop">
+			<h2><span class="glyphicon glyphicon-book"></span>Smart stuff</h2>
+			<p>Cool stuff that is really smart!<p>
+			<button class="btn btn-success marginTop">Sign up!</button>
+			</div>
+			
+		</div>
+	
+	</div>
+	<div class="container contentContainer" id="footer">
+		<div class="row ">
+		
+			<h1 class="center title">Download our app"</h1>
+			
+			<p class="lead center">You know you want to download this cool app</p>
+			<p class="center"><img src="appstore.png" class="appstoreImage"/>
+			
+		</div>
+		
+		
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+	
+		$(".contentContainer").css("min-height",$(window).height());
+		
+	</script>
+	
+  </body>
+</html>
