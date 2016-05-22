@@ -1,39 +1,21 @@
 <?php
 
-	$myArray=array("pizza","chocolate","marshmellows");
-
-	echo $myArray[2];
-
-
-	echo "<br/><br />";
-
-	$anotherArray[0]="more pizza";
-	$anotherArray[1]="pretzels";
-
-
-	echo "<br/><br />";
+	for($i=1; $i<101; $i++){
+		if($i%15 == 0){
+			echo "fizzbuzz <br />";
+		}
+		elseif($i%5 ==0 ){
+			echo "buzz <br />";
+		}
+		elseif($i%3==0){
+			echo "fizz <br />";
+		}
+		else{
+			echo $i." <br />";
+		}
+		
+		
+		
+	}
 	
-	$thirdArray=array(
-		"php" 			=> "server",
-		"javascript"  	=> "client",
-		"jquery" 		=> "client(JS)",
-		"html" 			=> "client*"
-	);
-
-	print_r($thirdArray);
-	
-	$anotherArray[] = "peanuts";
-	echo "<br/><br />";
-	
-	print_r($anotherArray);
-	
-	echo "<br/><br />";
-	
-	unset($thirdArray[html]);
-	
-	print_r($thirdArray);
-	
-	$name="Sean"
-	
-	unset($name);
 ?>
