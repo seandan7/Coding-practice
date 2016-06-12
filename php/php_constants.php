@@ -1,27 +1,38 @@
-<?php 
 
-	//this is an example of class contants
-	class Cars {
+<?php
+
+	class Person {
 		
-		//Class constants
+		const MIDDLE_NAME = "Brian";
 		
-			const CAR_01 = 'Ford Ranger';
-			const CAR_02 = 'Ford F150';
-			const CAR_03 = 'Toyota Tacoma';
-			
 		
+		var $first_name = "N/A";
+		var $last_name = "N/A";
+		
+		function set_person_name(){
+			$this->first_name = "sean";
+			$this->last_name = "daniels";
+		}
+		
+		function get_person_name(){
+			echo "Changed Name: ".$this->first_name." ".$this->last_name; 
+		}
 	}
-	// class contant syntax
-	// classname::contantname
-	echo "Class contant CAR_01 value :".Cars::CAR_01."<br>";
-	echo "Class contant CAR_02 value :".Cars::CAR_02."<br>";
-	echo "Class contant CAR_03 value :".Cars::CAR_03."<br>";
 	
-?>
-
+	$person_01 = new Person();
 	
+	echo "<h1 style='text-align:center;'>Hello</h1>";
 	
+	echo "Default name: ".$person_01->first_name." ".$person_01->last_name;
+	echo "<br>";
+		echo "<br>";
 	
+	//Change the name
+	$person_01->set_person_name();
 	
-	
-	
+	$person_01->get_person_name();
+		echo "<br>";
+			echo "<br>";
+			
+	echo "Constant Value: ".Person::MIDDLE_NAME;
+	?>
