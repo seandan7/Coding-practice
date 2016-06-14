@@ -16,7 +16,7 @@
 			echo "<br>"."ID Number: ".$this->id."<br><br>";
 		}	
 		
-		public function __destruct(){
+		function __destruct(){
 			echo "<p style='font-weight: bold;'>Now destroying previous objects created!</p><br>";
 		}
 	}// end of class Person
