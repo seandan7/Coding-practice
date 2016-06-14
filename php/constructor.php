@@ -11,10 +11,15 @@
 			$this->last_name = $lastName;
 			$this->id=$emp_id;
 		}
-		public function get_emp(){
+		function get_emp(){
 			echo "Name: ".$this->first_name." ".$this->last_name;
 			echo "<br>"."ID Number: ".$this->id."<br><br>";
 		}	
+		function set_employee_info($firstName,$lastName,$emp_id){
+			$this->first_name = $firstName;
+			$this->last_name = $lastName;
+			$this->id = $emp_id;
+	}
 		
 		function __destruct(){
 			echo "<p style='font-weight: bold;'>Now destroying previous objects created!</p><br>";
