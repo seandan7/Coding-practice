@@ -29,9 +29,9 @@
 		$emp_02 = new Employee("Jim", "Jones",456);
 		$emp_03 = new Employee("Bobby", "Harrison",789);
 		
-	echo "<h1 style='text-align: center;'>Exercise Section 4: The constructor/destructor methods</h1>";
-	echo "<br><h3>List of employees</h3>";
-	$emp_01->get_emp();
-	$emp_02->get_emp();
-	$emp_03->get_emp();
+		echo "<h1 style='text-align: center;'>Exercise Section 4: The constructor/destructor methods</h1>";
+		echo "<br><h3>List of employees</h3>";
+		$emp_01->get_emp();
+		$emp_02->get_emp();
+		$emp_03->get_emp();
 ?>
