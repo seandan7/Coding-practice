@@ -16,7 +16,7 @@
 	} // End of class A
 	
 	class B extends A {
-		// Enherits public features from class Attribute
+		// Inherits public features from class Attribute
 		
 		// Override the attributes
 		
