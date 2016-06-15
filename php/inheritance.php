@@ -18,8 +18,7 @@
 	class B extends A {
 		// Inherits public features from class A
 		
-		// Override the attributes
-		
+
 		private $attribute_01_B = "Attribute 1 from class B";
 		private $attribute_02_B = "Attribute 2 from class B";
 		
