@@ -12,22 +12,9 @@
 */
 
 Route::get('/', function () {
-	
-/* 	$book = new Book;
-	$book->writer = 'Mark Twain';
-	$book->title = 'The Adventures of Tom Sawyer';
-	$book->description = 'A novel about fence painting? I haven\'t read it in a while';
-	$book->published = date ('Y-m-d');
-	$book->save(); */
-	
-	$book = Book::find(1);
-	//$book->in_store = 1;
-	//$book->save();
-	
-	return $book->in_store;
-	
-	//return $book->id;
-    //return view('welcome');
+
+	$cities = array('Los Angeles', 'San Francisco', 'New York', 'Miami');
+    return view('hello', array('location'=>'California', 'cities' =>$cities));
 });
 
 Route::get('category', function() {
