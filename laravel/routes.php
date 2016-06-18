@@ -12,23 +12,22 @@
 */
 
 Route::get('/', function () {
-	/*
-	Schema::create('books',function($newtable){
-		$newtable->increments('id');
-		// Default 255 character length
-		$newtable->string('writer');
-		$newtable->string('title',300);
-		$newtable->text('description',500);
-		$newtable->date('published');
-		$newtable->integer('copies');
-		$newtable->timestamps();
-	});
-	*/
-	Schema::table('book',function($newtable){
-		$newtable->boolean('in_store');
-		$newtable->dropColumn('copies');
-	}
-    return view('welcome');
+	
+/* 	$book = new Book;
+	$book->writer = 'Mark Twain';
+	$book->title = 'The Adventures of Tom Sawyer';
+	$book->description = 'A novel about fence painting? I haven\'t read it in a while';
+	$book->published = date ('Y-m-d');
+	$book->save(); */
+	
+	$book = Book::find(1);
+	//$book->in_store = 1;
+	//$book->save();
+	
+	return $book->in_store;
+	
+	//return $book->id;
+    //return view('welcome');
 });
 
 Route::get('category', function() {
@@ -43,5 +42,4 @@ Route::get('category/{parameter}', function($parameter) {
 	return "{$parameter} page content";
 });
 
-Route::get
 
