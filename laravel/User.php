@@ -23,7 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+	
 	public function setPasswordAttribue($value){
 		$this->attibutes['password'] = Hash::make($value);
+	}
+	
+	public function book(){
+		return $this->hasMany('Book');
 	}
 }
