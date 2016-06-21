@@ -46,7 +46,9 @@
 				}
 				else {
 					//authentication fails
-					return Redirect::to('login');
+					return Redirect::to('login')
+										->with('message','Invalid Username/password comination')
+										->with('alert-class','alert-danger');
 				}
 			}
 		}
@@ -63,6 +65,7 @@
 		
 		public function logout(){
 			Auth::logout();
-			return Redirect::route('login');
+			return Redirect::route('login')
+							->with('message','You have successfully logged out!')
 		}
 	}
