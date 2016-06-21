@@ -4,10 +4,63 @@
 	
 		public function home(){
 			
-			$user = User::find(1);
-			//$books = Book::where('user_id','=',$user->id)->get();
+			$user = Auth::user();
 			$books = $user->book;
 			
-			return View::make('home')->with('books',$books);
+			// passing a variable to a view
+			return View::make('home',compact('books'));
+		}
+		
+		public function getLogin() {
+			return View::make('login');
+		}
+		
+		public function postLogin() {
+			// validate user input
+			$rules = array(
+				'username' => 'required',
+				'password' => 'required|min:4'
+			);
+			$validator = Validator::make(Input::all(),$rules);
+			
+			if ($validator->fails()){
+				// form invalid
+				return Redirect::route('home');
+				->withErrors($validator);
+				->withInput(Input::except('password'));
+			}
+
+			
+			// attemp to login user
+			else {
+				$userdata = array(
+					'username'=>Input::get('username');
+					'password'=>Input::get('password');
+				);
+				
+				if(Auth::attempt($userdata)){
+					//authentication successfull
+					 return Redirect::route('home');
+				}
+				else {
+					//authentication fails
+					return Redirect::to('login');
+				}
+			}
+		}
+
+		public function getRegister() {
+			return View::make('register');
+		}
+		
+		public function postRegister() {
+			// validate user input
+			
+			// attemp to register the user
+		}
+		
+		public function logout(){
+			Auth::logout();
+			return Redirect::route('login');
 		}
 	}

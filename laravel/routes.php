@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', array('as'=>'home','uses'=>'userController@home'));
 
-	$cities = array('Los Angeles', 'San Francisco', 'New York', 'Miami');
-    return view('hello', array('location'=>'California', 'cities' =>$cities));
-});
+Route::get('/login', array('as'=>'login','uses'=>'UserController@getLogin'));
+Route::post('/login', array('as'=>'login-post','uses'=>'UserController@postLogin'));
 
-Route::get('category', function() {
-	return "Category Page Content";
-});
+Route::get('/register', array('as'=>'register','uses'=>'UserController@getRegister'));
+Route::post('/register', array('as'=>'register-post','uses'=>'UserController@postRegister'));
 
-Route::get('category/sf', function() {
-	return "Science Fiction";
-});
-
-Route::get('category/{parameter}', function($parameter) {
-	return "{$parameter} page content";
-});
-
-
+Route::get('/logout', array('as'=>'lougout','uses'=>'UserController@logout);
