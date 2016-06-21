@@ -31,20 +31,24 @@
 			}
 
 			
-			// attemp to login user
+			// attempt to login user
 			else {
 				$userdata = array(
 					'username'=>Input::get('username');
 					'password'=>Input::get('password');
 				);
 				
-				if(Auth::attempt($userdata)){
+				$remember = Input::has('remember') ? true:false;
+				
+				if(Auth::attempt($userdata, $remember)){
 					//authentication successfull
 					 return Redirect::route('home');
 				}
 				else {
 					//authentication fails
-					return Redirect::to('login');
+					return Redirect::to('login')
+										->with('message','Invalid Username/password comination')
+										->with('alert-class','alert-danger');
 				}
 			}
 		}
@@ -55,12 +59,25 @@
 		
 		public function postRegister() {
 			// validate user input
+			$validator = User::validate(Input::all());
+			if ($validator->passes()) {
+				// attempt to register the user
+				User::create(array(
+					'username'=>Input::get('username'),
+					'email'=>Input::get('email'),
+					'email'=>Input::get('password')
+				));
+
+				return Redirect::route('login')->withMessage('You have successfully registered');
+			}
 			
-			// attemp to register the user
+			return Redirect::route('register')->withErrors($validator);
+		
 		}
 		
 		public function logout(){
 			Auth::logout();
-			return Redirect::route('login');
+			return Redirect::route('login')
+							->with('message','You have successfully logged out!')
 		}
 	}

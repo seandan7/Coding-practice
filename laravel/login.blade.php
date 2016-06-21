@@ -15,8 +15,13 @@
 			{{ Form::password('password',null,array('class'=>'form-control'))
 				}}
 			</div>
+			<div class="form-group">
+			{{ Form::label('remember','Remember Me')}}
+				{{ Form::checkbox('remember')}}
+			</div>
 			{{ Form::submit('Log In',array('class'=>'btn btn-primary'))
 			}}
 		</div>
+		{{Form::close()}}
 	</div>
 @stop
