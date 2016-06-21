@@ -3,7 +3,7 @@
 @section('content');
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-		{{ Form::open(array('url'=>'/login','method'=>'post'))
+		{{ Form::open(array('url'=>'/register','method'=>'post'))
 		}}
 			<div class="form-group">
 			{{ Form::label('username','Username')}}
@@ -13,16 +13,27 @@
 					{{ $errors->first('username') }}
 				@endif
 			</div>
+			
 			<div class="form-group">
-			{{ Form::label('password','Password')}}
-			{{ Form::password('password',null,array('class'=>'form-control'))
+			{{ Form::label('email','Email')}}
+			{{ Form::text('password',null,array('class'=>'form-control'))
 				}}
-					@if ($errors->has('password'))
-					{{ $errors->first('password') }}
+					@if ($errors->has('email'))
+					{{ $errors->first('email') }}
 				@endif
 			</div>
-			{{ Form::submit('Log In',array('class'=>'btn btn-primary'))
+			
+			<div class="form-group">
+			{{ Form::label('password_confirmation','Password')}}
+			{{ Form::password('password_confirmation',null,array('class'=>'form-control'))
+				}}
+					@if ($errors->has('password_confirmation'))
+					{{ $errors->first('password_confirmation') }}
+				@endif
+			</div>
+			{{ Form::submit('Register',array('class'=>'btn btn-primary'))
 			}}
 		</div>
+		{{ Form::close()}}
 	</div>
 @stop
