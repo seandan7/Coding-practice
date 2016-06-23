@@ -1,25 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Day 6 Javascript notes
 
 //capitalize and add period
