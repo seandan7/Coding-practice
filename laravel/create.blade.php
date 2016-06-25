@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layout.master')
 
 @section('content')
 
@@ -9,27 +9,9 @@
 
 <div class="col-md-6">
 
-@if($errors->any())
-	<ul class="alert alert-danger">
-		@foreach($errors->all() as $error)
-			<li>{{ $error }}</li>
-		@endforeach
-	</ul>
-@endif
+@include('errors.formerrors')
 
-	<div class="form-group">
-		{!! Form::label('title', 'Blog Title') !!}
-		{!! Form::text('title', null, ['class' => 'form-control']) !!}
-	</div>
-	
-	<div class="form-group">
-		{!! Form::label('body', 'Blog body') !!}
-		{!! Form::textarea('body', null, ['class' => 'form-control']) !!}
-	</div>
-	
-	<div class="form-group">
-	{!! Form::submit('Add Blog', ['class' => 'btn btn-primary']) !!}
-	</div>
+@include('partials.blogform',['submitButton' => 'Add Blog']);
 </div>
 {!!  Form::close()  !!}<!-- Close the form -->
 
