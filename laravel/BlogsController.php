@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Request;
-
+use App\Http\Requests\BlogRequest;
 use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class BlogsController extends Controller
 {
     public function index(){
-		$blogs = Blog::all();
+		$blogs = Blog::latest()->get();
 		return view('blogs.index')->with('blogs',$blogs);
 	}
 	
@@ -19,10 +19,12 @@ class BlogsController extends Controller
 		return view('blogs.create');
 	}
 	
-	public function store(){
+	public function store(BlogRequest $request){
 		$input = Request::all();
-		return $input;
-	}
+		Blog::create($input);
+		
+		return redirect('blogs');
+		}
 	
 	public function show($id){
 		$blog = Blog::findOrFail($id);
