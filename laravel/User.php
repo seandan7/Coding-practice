@@ -3,9 +3,19 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Authenticatable
+
+
+class User extends model implements AuthenticatableContract, CanResetPasswordContract
 {
+	use Authenticatable, CanResetPassword;
+	
+	protected $table = 'users';
+	
     /**
      * The attributes that are mass assignable.
      *
@@ -23,23 +33,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-	
-	public function setPasswordAttribue($value){
-		$this->attibutes['password'] = Hash::make($value);
-	}
-	
-	public function book(){
-		return $this->hasMany('Book');
-	}
-	
-	public static function validate($input){
-		$rules = array(
-			'username' => 'required|min:3|max:50|alphanum|unique:users',
-			'email'=> 'required|email|unique:users',
-			'password' => 'required|between:4,10|confirmed|alphanum',
-			'password_confirmation' => 'required|between:4,10'
-		);
-		
-		return Validator::make($input,$rules);
-	}
 }

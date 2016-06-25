@@ -1,39 +1,29 @@
-@extends ('layout.main');
+<!-- resources/views/auth/register.blade.php -->
 
-@section('content');
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-		{{ Form::open(array('url'=>'/register','method'=>'post'))
-		}}
-			<div class="form-group">
-			{{ Form::label('username','Username')}}
-			{{ Form::text('username',null,array('class'=>'form-control'))
-				}}
-				@if ($errors->has('username'))
-					{{ $errors->first('username') }}
-				@endif
-			</div>
-			
-			<div class="form-group">
-			{{ Form::label('email','Email')}}
-			{{ Form::text('password',null,array('class'=>'form-control'))
-				}}
-					@if ($errors->has('email'))
-					{{ $errors->first('email') }}
-				@endif
-			</div>
-			
-			<div class="form-group">
-			{{ Form::label('password_confirmation','Password')}}
-			{{ Form::password('password_confirmation',null,array('class'=>'form-control'))
-				}}
-					@if ($errors->has('password_confirmation'))
-					{{ $errors->first('password_confirmation') }}
-				@endif
-			</div>
-			{{ Form::submit('Register',array('class'=>'btn btn-primary'))
-			}}
-		</div>
-		{{ Form::close()}}
-	</div>
-@stop
+<form method="POST" action="/auth/register">
+    {!! csrf_field() !!}
+
+    <div>
+        Name
+        <input type="text" name="name" value="{{ old('name') }}">
+    </div>
+
+    <div>
+        Email
+        <input type="email" name="email" value="{{ old('email') }}">
+    </div>
+
+    <div>
+        Password
+        <input type="password" name="password">
+    </div>
+
+    <div>
+        Confirm Password
+        <input type="password" name="password_confirmation">
+    </div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>

@@ -1,27 +1,23 @@
-@extends ('layout.main');
+<!-- resources/views/auth/login.blade.php -->
 
-@section('content');
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-		{{ Form::open(array('url'=>'/login','method'=>'post'))
-		}}
-			<div class="form-group">
-			{{ Form::label('username','Username')}}
-			{{ Form::text('username',null,array('class'=>'form-control'))
-				}}
-			</div>
-			<div class="form-group">
-			{{ Form::label('password','Password')}}
-			{{ Form::password('password',null,array('class'=>'form-control'))
-				}}
-			</div>
-			<div class="form-group">
-			{{ Form::label('remember','Remember Me')}}
-				{{ Form::checkbox('remember')}}
-			</div>
-			{{ Form::submit('Log In',array('class'=>'btn btn-primary'))
-			}}
-		</div>
-		{{Form::close()}}
-	</div>
-@stop
+<form method="POST" action="/auth/login">
+    {!! csrf_field() !!}
+
+    <div>
+        Email
+        <input type="email" name="email" value="{{ old('email') }}">
+    </div>
+
+    <div>
+        Password
+        <input type="password" name="password" id="password">
+    </div>
+
+    <div>
+        <input type="checkbox" name="remember"> Remember Me
+    </div>
+
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>

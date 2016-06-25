@@ -10,8 +10,14 @@
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Sign up</a></li>
-					<li><a href="#">Login</a></li>
+				
+				@if(Auth::check())
+					<li>Welcome {{ Auth::user()->name }}</li>
+					<li><a href="{{ route('logout') }}">Log out</a></li>
+				@else
+					<li><a href="{{ route('register') }}">Sign up</a></li>
+					<li><a href="{{ route('login') }}">Login</a></li>
+				@endif
 				</ul>
 			</div>
 	
