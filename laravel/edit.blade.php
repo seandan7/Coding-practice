@@ -13,6 +13,12 @@
 
 @include('partials.blogform',['submitButton' => 'Edit Blog ']);
 
+{!! Form::model($blog, ['method' => 'DELETE', 'action' => ['BlogsController@destroy', $blog->id]]) !!}
+
+	{!! Form::submit('Delete Blog', ['class' => 'btn btn-danger']) !!}
+
+{!! Form::close() !!}
+
 </div>
 {!!  Form::close()  !!}<!-- Close the form -->
 

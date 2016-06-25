@@ -52,7 +52,10 @@ class BlogsController extends Controller
 		return redirect('blog');
 	}
 	
+	// Remove the blog post
 	public function destroy($id){
+		Blog::destroy($id);
 		
+		return redirect('blogs');
 	}
 }
