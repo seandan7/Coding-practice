@@ -10,6 +10,13 @@ use App\Http\Controllers\Controller;
 
 class BlogsController extends Controller
 {
+	
+	public function __construct(){
+		//$this->middleware('auth', ['only' => ['create', 'store']]);
+		$this->middleware('auth', ['except' => ['index', 'show' ]])
+	}
+	
+	
     public function index(){
 		$blogs = Blog::latest()->get();
 		return view('blogs.index')->with('blogs',$blogs);
@@ -32,7 +39,7 @@ class BlogsController extends Controller
 	}
 	
 	public function edit($id){
-		// Edit a blog
+		
 	}
 	
 	public function update(Request $request, $id){
