@@ -17,12 +17,12 @@
 	</ul>
 @endif
 
-	<div class="form-group"
+	<div class="form-group">
 		{!! Form::label('title', 'Blog Title') !!}
 		{!! Form::text('title', null, ['class' => 'form-control']) !!}
 	</div>
 	
-	<div class="form-group"
+	<div class="form-group">
 		{!! Form::label('body', 'Blog body') !!}
 		{!! Form::textarea('body', null, ['class' => 'form-control']) !!}
 	</div>
