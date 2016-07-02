@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="js/bootstrap.js"></script>
+
+	</head>
+	<body>
+		<div class="container"><div style="height:50px;">The Space</div>
+			<a href="#" data-toggle="tooltip" title="This is the title">Tooltip on hover</a>
+			<button data-toggle="tooltip" data-placement="bottom" title="This is the button" class="btn btn-success">Click </button>
+			<br>
+			<a href="#" data-toggle="popover" title="What it do" data-content="This is the content for the popover">The popover</a>
+			<a href="#" data-toggle="popover" title="What it do" data-trigger="focus" data-content="This is the content for the popover">The popover</a>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+				
+				$('[data-toggle="popover"]').popover();
+			});
+			$
+		</script>
+	</body>
+</html>
