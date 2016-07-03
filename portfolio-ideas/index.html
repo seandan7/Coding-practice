@@ -36,18 +36,25 @@
 		</style>
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand">
-					<img style="width:100px;"src="images/logo.png">
-				</a>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">
+						<img style="width:100px;"src="images/logo.png">
+					</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Email</a></li>
+							<li><a href="#">Phone</a></li>
+							<li><a href="#">Snail Mail</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="#home">Home</a></li>
-				<li><a href="#work">My Work</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
 		</nav>
 		<section id="home" class="cl-white text-center" style="background: url(images/seven.jpg); background-size: 100% 100%;">
 			<h1 class="home-header">My Portfolio</h1>
