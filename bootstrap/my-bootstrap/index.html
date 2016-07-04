@@ -8,8 +8,6 @@
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -24,18 +22,24 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-
 			</div>
 			<div class="collapse navbar-collapse navbar-right">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Software<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Windows</a></li>
+							<li><a href="#">Apple</a></li>
+							<li><a href="#">Desktop</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="background-blue text-center">
+	<div class="background-blue text-center" id="myWelcome">
 		<h1> Welcome to my website</h1>
 		<p class="lead">I am building this website</p>
 	</div>
@@ -52,13 +56,23 @@
 			<h1>Hope you enjoy</h1>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<tr>
+	<div class="container-fluid home-about myFadeOut">
 		<div class="col-md-6">
 			<img width="400px" class="center-block" src="dog.jpg">
 		</div>
 		<div class="col-md-5">
-			<p class="lead">"At vero eoestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
+			<p class="lead">"At vero eoestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+			Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+			Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+			</p>
 		</div>
 	</div>
+	<footer class="container-fluid">
+		<div class="text-center">
+			<p>Sean Daniels. 2016</p>
+		</div>
+	</footer>
+
 </body>
 </html>

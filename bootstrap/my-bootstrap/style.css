@@ -7,14 +7,26 @@ body {
 	position: absolute;
 	opacity: 100%;
 }
+.navbar li a:hover {	
+	background: none;
+}
+
 .background-blue {
 	background: url("http://www.spyderonlines.com/images/wallpapers/image-background/image-background-17.png");
 	height:300px;
 	width:100%;
 	padding:50px;
 }
+.home-about {
+	background-color: lightgray;
+	padding:20px;
+}
 .tribox {
 	margin-bottom: 100px;
+}
+footer {
+	background-color: black;
+	color: white;
 }
 @keyframes fadeIn {
 	from {opacity: 0;} to {opacity: 1;}
@@ -40,4 +52,96 @@ body {
 	animation-duration: 1s;
 	-webkit-animation-duration: 1s;
 	-moz-animation-duration: 1s;
+}
+@keyframes fadeOut {
+	from {opacity: 1;} to {opacity: 0;}
+}
+@-webkit-keyframes fadeOut {
+	from {opacity: 1;} to {opacity: 0;}
+}
+@-moz-keyframes fadeOut {
+	from {opacity: 1;} to {opacity: 0;}
+}
+.fade-out {
+	opacity: 1;
+	
+	animation: fadeOut ease-in 1;
+	-webkit-animation: fadeOut ease-in 1;
+	-moz-animation: fadeOut ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+}
+
+.myFadeOut:hover {
+	opacity: 1;
+	
+	animation: fadeOut ease-in 1;
+	-webkit-animation: fadeOut ease-in 1;
+	-moz-animation: fadeOut ease-in 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+}
+
+/* Rotate */
+@keyframes myRotate {
+	0% { transform: rotate(0deg);}
+	25% {transform: rotate(90deg);}
+	50% {transform: rotate:(180deg);}
+	75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes myRotate {
+	0% { transform: rotate(0deg);}
+	25% {transform: rotate(90deg);}
+	50% {transform: rotate:(180deg);}
+	75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+@-moz-keyframes myRotate {
+	0% { transform: rotate(0deg);}
+	25% {transform: rotate(90deg);}
+	50% {transform: rotate:(180deg);}
+	75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+
+/* Move */
+@keyframes myMove {
+	0% {left: 0px;}
+	25% {left: 225px;}
+	50% {left: 450px;}
+	75% {left: 225px;}
+	100%{left: 0px;}	
+}
+@-webkit-keyframes myMove {
+	0% {left: 0px;}
+	25% {left: 225px;}
+	50% {left: 450px;}
+	75% {left: 225px;}
+	100%{left: 0px;}	
+}
+@-moz-keyframes myMove {
+	0% {left: 0px;}
+	25% {left: 225px;}
+	50% {left: 450px;}
+	75% {left: 225px;}
+	100%{left: 0px;}	
+}
+#myWelcome h1 {
+	position: relative;
+	animation: myMove 5s 1s;
+	-webkit-animation: myMove 5s infinite;
+	-moz-animation: myMove 5s infinite;
 }
