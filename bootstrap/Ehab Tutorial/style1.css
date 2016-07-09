@@ -1,0 +1,283 @@
+/*-----------------------------------
+UDEMY - The setup Course by Ehab Alaa
+-------------------------------------*/
+
+body {
+	font-family: 'lato';
+	color: #111;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+::selection{
+	background:  #873fb5;
+	color: #fff;
+}
+
+strong {
+	font-weight: 900;
+}
+
+p {
+	line-height: 24px;
+	font-weight: 300px;
+}
+
+/* Anchors */
+a,
+a:focus {
+	color: #873fb5;
+}
+
+a:hover {
+	color: #41135f;
+	text-decoration: none;
+}
+
+section {
+	padding: 50px 0;
+}
+
+/* Separators */
+
+hr {
+	width: 85px;
+}
+
+hr.icon:after {
+	content: "\f123";
+	font-family: "FontAwesome";
+	color: #873fb5;
+	font-size: 1.5em;
+	background-color: white;
+	top: -0.7em;
+	position: relative;
+	padding: .30em;
+}
+
+/* Section Heading */
+.section-heading {
+	color: #873fb5;
+}
+
+.section-heading h3 {
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+.section-heading hr {
+	border-color: #873fb5;
+	margin-bottom: 35px;
+}
+
+/*-----------------------------------
+0. Header
+-------------------------------------*/
+
+#home {
+	background: url("purp1.jpg") fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+	color: #fff;
+}
+
+.logo {
+	font-size: 72px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+	padding: 5px 20px 5px 20px;
+}
+
+#home h3 {
+	font-weight: 300;
+	margin: 0;
+}
+
+.learn-more {
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+}
+
+.learn-more .fa {
+	position: absolute;
+}
+
+.learn-more .second-arrow {
+	top: 8px;
+}
+
+.learn-more .third-arrow {
+	top: 16px;
+}
+/*------------------------------------------
+1. About 
+-------------------------------------------*/
+
+#about {
+	background: url("purp2.jpg");
+
+	background-size: cover;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+}
+
+#about h3 {
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+#about h4 {
+	font-weight: 300;
+	padding: 0 20%;
+}
+
+/*------------------------------------------
+2. Services 
+-------------------------------------------*/
+
+.service-item {
+	margin-bottom: 30px;
+}
+
+.service-item i {
+	font-size: 48px;
+	color: #c1c1c1;
+	float: left;
+	border-right: 1px solid #873fb5;
+	padding-right: 15px;
+}
+
+.service-title {
+	margin-top: -24px;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.service-title h3 {
+	color: #111;
+	font-weight: 900;
+}
+.service-title h4 {
+	font-weight: 100;
+	color: #873fb5;
+	margin-top: -5px;
+}
+
+/*------------------------------------------
+3. Skills 
+-------------------------------------------*/
+
+#skills {
+	background: url("orange1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+#skills h1 {
+	font-weight: 600;
+	font-size: 48px;
+}
+
+#skills h3 {
+	font-weight: 200;
+	margin-top: 0;
+}
+
+#skills p {
+	margin: 40px 0;
+}
+
+#skills .button{
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: 3px solid #fff;
+	border-radius: 2px;
+	padding-bottom: 10px;
+}
+
+#skills .button:hover {
+	color: #873fb5;
+}
+
+#skills .button:last-child {
+	margin-left: 20px;
+}
+
+.progress {
+	height:30px;
+	margin-bottom: 30px;
+	opacity: .78;
+	background-color: #000;
+	box-shadow: none;
+	border-radius: 4px;
+}
+.progress-bar {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#773a95+0,8d4563+100 */
+		background: #773a95; /* Old browsers */
+		background: -moz-linear-gradient(left,  #773a95 0%, #8d4563 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #773a95 0%,#8d4563 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #773a95 0%,#8d4563 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#773a95', endColorstr='#8d4563',GradientType=1 ); /* IE6-9 */
+}
+
+.progress-bars h5 {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+/*------------------------------------------
+4. Portfolio 
+-------------------------------------------*/
+#portfolio .col-md-4 {
+	padding: 0;
+}
+
+.portfolio-thumb img{
+	height: 270px;
+}
+#porfolio .portfolio-thumb img{
+	width: 100%;
+	height: 100%;
+}
+
+#portfolio portfolio-thumb {
+	overflow: hidden;
+	padding: 0;
+	margin: 0 auto;
+}
+
+#portfolio .portfolio-thumb .portfolio-overlay {
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: absolute;
+	background: rgba(135, 63, 181, .6);
+	padding: 20px 10px 20px 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#portfolio .portfolio-thumb:hover .portfolio-overlay {
+	opacity: 1;
+	cursor: pointer;
+}
